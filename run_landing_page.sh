@@ -1,20 +1,15 @@
 #!/bin/bash
 
-# Modern Landing Page - GTK Application Runner
-# This script launches the landing page application
-
 echo "🚀 Launching Modern Landing Page Application..."
 echo "   Built with GTK3 and C"
 echo ""
 
-# Check if the executable exists
 if [ ! -f "./landing_page" ]; then
     echo "❌ Error: landing_page executable not found!"
     echo "   Please run 'make' to build the application first."
     exit 1
 fi
 
-# Check if GTK is available
 if ! pkg-config --exists gtk+-3.0; then
     echo "❌ Error: GTK3 not found!"
     echo "   Please install GTK3 development libraries:"
@@ -33,7 +28,6 @@ echo "  • Responsive design"
 echo "  • Smooth hover animations"
 echo ""
 
-# Launch the application
 ./landing_page
 
 echo ""
